@@ -4,7 +4,8 @@ const notesSchema = new mongoose.Schema(
     {
         userId:{type:mongoose.Schema.Types.ObjectId, ref:"User",required:true},
         title:{type:String},
-        description:{type:String}
+        description:{type:String},
+        pinned: { type: Boolean, default: false }  
     }
 )
 
