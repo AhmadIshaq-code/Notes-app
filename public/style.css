@@ -1,152 +1,180 @@
-/* General Reset */
+/* 🌑 General Reset */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f6f9;
-  color: #333;
+  background: #18181b; /* zinc-900 */
+  color: #f4f4f5;
+  line-height: 1.6;
 }
 
-/* Navbar */
+/* 🌑 Navbar */
 nav {
-  background: #4a90e2;
-  color: white;
-  padding: 15px 20px;
+  background: #27272a; /* zinc-800 */
+  color: #f9fafb;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 nav h1 {
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #38bdf8; /* sky-400 */
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  color: white;
+  color: #f9fafb;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
+  transition: all 0.3s;
 }
 
 nav ul li a:hover {
+  color: #38bdf8;
   text-decoration: underline;
 }
 
-/* Sections */
+/* 🌑 Sections */
 section {
-  margin: 20px auto;
+  margin: 25px auto;
   padding: 20px;
   width: 90%;
   max-width: 500px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+  background: #27272a;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.6);
+  text-align: center; /* ✅ Center align */
 }
 
 h2 {
   text-align: center;
   margin-bottom: 15px;
+  color: #38bdf8;
 }
 
-/* Forms */
+/* 🌑 Forms */
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center; /* ✅ Center items */
+  gap: 12px;
 }
 
 input, textarea {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #3f3f46;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 15px;
+  background: #18181b;
+  color: #f4f4f5;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px #38bdf8;
+}
+
+/* 🌑 Main Buttons */
 button {
-  background: #4a90e2;
-  color: white;
-  padding: 10px;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 8px 14px;
   border: none;
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
+  transition: all 0.3s;
+  width: auto; /* ✅ Compact width */
+  min-width: 120px; /* ✅ Equal button length */
 }
 
 button:hover {
-  background: #0056b3;
+  background: #0ea5e9;
 }
 
-/* Notes List */
+/* 🌑 Notes List */
 #notesList {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .note {
   padding: 15px;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid #ddd;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.5);
 }
 
 .note h3 {
   margin: 0 0 8px 0;
+  color: #f9fafb;
 }
 
 .note p {
   margin: 0 0 10px 0;
-  color: #555;
+  color: #d4d4d8;
+  font-size: 14px;
 }
 
-/* General button base */
+/* 🌑 Note Action Buttons */
 .note button {
-  margin-right: 10px;
-  padding: 6px 12px;
+  margin-right: 8px;
+  padding: 5px 10px;
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 /* Pin button (blue) */
 .btn-pin {
-  background: #4a90e2;
+  background: #38bdf8;
+  color: #0f172a;
 }
 .btn-pin:hover {
-  background: #0056b3;
+  background: #0ea5e9;
 }
 
-/* Edit button (blue) */
+/* Edit button (green) */
 .btn-edit {
-  background: #4a90e2;
+  background: #22c55e;
 }
 .btn-edit:hover {
-  background: #0056b3;
+  background: #16a34a;
 }
 
 /* Delete button (red) */
 .btn-delete {
-  background: #dc3545;
+  background: #ef4444;
 }
 .btn-delete:hover {
-  background: #a71d2a;
+  background: #b91c1c;
 }
 
-.note button:hover {
-  opacity: 0.9;
-}
-
-/* Pinned Notes */
+/* 🌑 Pinned Notes */
 .pinned {
-  border-left: 5px solid #007bff;
-  background: #e9f2ff;
+  border-left: 5px solid #38bdf8;
+  background: #1e293b;
 }
