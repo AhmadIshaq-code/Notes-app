@@ -20,7 +20,7 @@ export const createNote = async (req, res) => {
 
 export const getNotes = async (req, res) => {
   try {
-    const notes = await Notes.find({ userId: req.user.id });
+    const notes = await Notes.find({ userId: req.user.id }).sort({ pinned: -1, updatedAt: -1 });
     res.json(notes);
   } catch (error) {
     res.status(500).json({ message: error.message });
