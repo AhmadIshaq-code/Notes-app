@@ -81,18 +81,6 @@ Simply open `public/index.html` in your browser to access the frontend.
 
 ---
 
-## 📷 Preview
-
-### 🔑 Login & Signup
-
-![Auth Screenshot](https://via.placeholder.com/600x300.png?text=Signup+%26+Login+Page)
-
-### 📝 Notes Dashboard
-
-![Notes Screenshot](https://via.placeholder.com/600x300.png?text=Notes+Dashboard)
-
----
-
 ## 🤝 Contributing
 
 Contributions are welcome! To contribute:
