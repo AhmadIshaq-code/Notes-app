@@ -8,5 +8,6 @@ noteRouter.post("/create", AuthChecker,createNote);
 noteRouter.get("/get-notes",AuthChecker, getNotes);
 noteRouter.put("/update-note/:id",AuthChecker, updateNote);
 noteRouter.delete("/delete-note/:id",AuthChecker, deleteNote);
+noteRouter.patch("/toggle-pin/:id", AuthChecker, togglePin);
 
 export default noteRouter;
