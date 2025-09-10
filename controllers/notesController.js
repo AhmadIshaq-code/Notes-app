@@ -52,3 +52,19 @@ export const deleteNote = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const togglePin = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const note = await Notes.findOne({ _id: id, userId: req.user.id });
+
+    if (!note) return res.status(404).json({ message: "Note not found" });
+     
+    note.pinned = !note.pinned;   // toggle between true/false
+    await note.save();
+
+    res.json({ message: `Note ${note.pinned ? "pinned" : "unpinned"} successfully`, note });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
