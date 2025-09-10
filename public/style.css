@@ -1,0 +1,152 @@
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  background: #4a90e2;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  margin: 20px auto;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  background: #4a90e2;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Notes List */
+#notesList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.note {
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.05);
+}
+
+.note h3 {
+  margin: 0 0 8px 0;
+}
+
+.note p {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+/* General button base */
+.note button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Pin button (blue) */
+.btn-pin {
+  background: #4a90e2;
+}
+.btn-pin:hover {
+  background: #0056b3;
+}
+
+/* Edit button (blue) */
+.btn-edit {
+  background: #4a90e2;
+}
+.btn-edit:hover {
+  background: #0056b3;
+}
+
+/* Delete button (red) */
+.btn-delete {
+  background: #dc3545;
+}
+.btn-delete:hover {
+  background: #a71d2a;
+}
+
+.note button:hover {
+  opacity: 0.9;
+}
+
+/* Pinned Notes */
+.pinned {
+  border-left: 5px solid #007bff;
+  background: #e9f2ff;
+}
